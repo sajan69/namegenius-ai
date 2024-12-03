@@ -1,6 +1,6 @@
 export const config = {
   gemini: {
-    apiKey: process.env.GEMINI_API_KEY || 'AIzaSyCYs9M6BotN4znnd0BS2X10pRpTXPgS0FU',
+    apiKey: process.env.GEMINI_API_KEY ,
     model: 'gemini-pro',
   },
   maxNamesPerRequest: 5,
