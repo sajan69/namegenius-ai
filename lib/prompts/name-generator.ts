@@ -1,19 +1,29 @@
 import { config } from '../config';
-
 export const generateNamePrompt = (description: string, industry: string) => `
-Generate ${config.maxNamesPerRequest} unique and creative business names for a ${industry} business with the following description: "${description}".
-For each name, provide:
-1. The business name
-2. A brief explanation of why it works
-3. Suggested domain variations (com, io, co)
+You are an expert business naming consultant. Your task is to generate ${config.maxNamesPerRequest} unique and creative business names.
 
-Format as JSON array with objects containing: name, explanation, domains
+Constraints:
+- Business Type: ${industry}
+- Business Description: "${description}"
+- Response MUST be a valid, parseable JSON array
+- Each name object must include: name, explanation, domains
 
-Example format:
+Strictly follow this JSON schema:
 [
   {
-    "name": "Example Name",
-    "explanation": "This name works because...",
-    "domains": ["examplename.com", "examplename.io"]
+    "name": "string",
+    "explanation": "string",
+    "domains": ["string", "string"]
   }
-]`;
+]
+
+Example:
+[
+  {
+    "name": "TechNova Solutions",
+    "explanation": "Combines 'technology' and 'nova' to suggest innovative, bright beginnings in tech",
+    "domains": ["technova.com", "technova.io"]
+  }
+]
+
+Your response:`;

@@ -28,14 +28,27 @@ export class GeminiService {
 
   private parseResponse(text: string): BusinessName[] {
     try {
-      const parsed = JSON.parse(text);
+      // Trim whitespace and remove any markdown code block indicators
+      const cleanedText = text.trim().replace(/^```json\n|```$/g, '');
+  
+      const parsed = JSON.parse(cleanedText);
+      
       if (!Array.isArray(parsed)) {
-        throw new Error('Invalid response format');
+        throw new Error('Response is not a JSON array');
       }
+  
+      // Validate each business name object
+      parsed.forEach(item => {
+        if (!item.name || !item.explanation || !Array.isArray(item.domains)) {
+          throw new Error('Invalid business name object structure');
+        }
+      });
+  
       return parsed;
     } catch (error) {
+      console.error('Full response text:', text);
       console.error('Parse error:', error);
-      throw new Error('Failed to parse Gemini response');
+      throw new Error(`Failed to parse Gemini response: ${error.message}`);
     }
   }
 }
