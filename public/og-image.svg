@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#000"/>
+  <g transform="translate(100, 115)">
+    <text x="0" y="0" fill="#FFF" font-family="system-ui" font-size="72" font-weight="bold">
+      NameGenius
+    </text>
+    <text x="0" y="100" fill="#888" font-family="system-ui" font-size="36">
+      AI-Powered Business Name Generator
+    </text>
+  </g>
+  <g transform="translate(700, 165) scale(0.6)">
+    <path d="M256 96C176.5 96 112 160.5 112 240C112 319.5 176.5 384 256 384C335.5 384 400 319.5 400 240C400 160.5 335.5 96 256 96ZM256 352C194.1 352 144 301.9 144 240C144 178.1 194.1 128 256 128C317.9 128 368 178.1 368 240C368 301.9 317.9 352 256 352Z" fill="#FFF"/>
+    <path d="M256 160C211.8 160 176 195.8 176 240C176 284.2 211.8 320 256 320C300.2 320 336 284.2 336 240C336 195.8 300.2 160 256 160ZM256 288C229.5 288 208 266.5 208 240C208 213.5 229.5 192 256 192C282.5 192 304 213.5 304 240C304 266.5 282.5 288 256 288Z" fill="#FFF"/>
+    <circle cx="256" cy="240" r="32" fill="#FFF"/>
+    <path d="M368 128L400 96M144 352L112 384M368 352L400 384M144 128L112 96" stroke="#FFF" stroke-width="24" stroke-linecap="round"/>
+  </g>
+</svg>

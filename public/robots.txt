@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://namegenius.sajanadhikari.com.np
+
+# Sitemaps
+Sitemap: https://namegenius.sajanadhikari.com.np/sitemap.xml
